@@ -429,7 +429,7 @@ p {
 .content-esp2 {
     display: flex;
     align-items: center;
-    margin-top: 100px;
+    margin: 100px 0px;
 }
 
 .content-esp .spa1 {
