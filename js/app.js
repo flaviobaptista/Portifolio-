@@ -12,3 +12,12 @@ document.querySelectorAll('[fb-nav]').forEach(link => {
     }
 })
 
+function openBar() {
+    let bar = document.getElementById('bar')
+    bar.style.display = 'block'
+}
+function closeBar() {
+    let bar = document.getElementById('bar')
+    bar.style.display = 'none'
+}
+

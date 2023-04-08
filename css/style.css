@@ -44,38 +44,92 @@ body {
     border: 0;
     padding: 0;
     display: flex;
+    width: 100vw;
+    height: 100vh;
     background-color: #1d1d1d;
     color: antiquewhite;
     overflow: hidden;
 }
 
+.bi-x-lg {
+    display: none;
+    float: right;
+    font-size: 18pt;
+    padding: 10px 10px;
+}
+
+.bi-list {
+    position: fixed;
+    float: inline-start;
+    margin: 20px;
+    font-size: 1.5em;
+    background-color: rgba(44, 44, 44, 0.813);
+    color: #ffffff;
+    padding: 3px;
+    border: solid 1px antiquewhite;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 45px;
+    z-index: 1000;
+    display: none;
+}
+
+
 nav {
     background-color: #373636;
     height: 100vh;
-    width: 25vw;
+    width: 25%;
     border-right: solid 1px antiquewhite;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: 0;
-    padding: 10px 0px;
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
     z-index: 1000;
     font-family: 'SoftElegance';
+    overflow-y: scroll;
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
+nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+nav::-webkit-scrollbar-track {
+    background: #3e3e3e;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: #ffd950;
+    border: none;
+}
+
+.img-prof {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 nav img {
-    width: 15vw;
+    width: 60%;
     border-radius: 100%;
     border: solid 2px antiquewhite;
+    margin-top: 10px;
 }
 
 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     width: 100%;
+    height: 60%;
     margin: 0;
-    padding: 0px 15px;
+    padding: 20px 15px;
     box-sizing: border-box;
 }
 
@@ -85,23 +139,67 @@ li {
     text-decoration: none;
     color: antiquewhite;
     list-style-type: none;
-    margin: 20px 0px;
+    margin: 14px 0px;
     font-size: 1.1em;
-    height: 50px;
+    height: 100%;
     width: 100%;
     transition: all 0.42s;
 }
 
-a:hover {
+nav a:hover {
     color: #ffd950;
     letter-spacing: 2px;
     text-shadow: 0px 0px 20px antiquewhite;
 }
 
+nav a:focus{
+    color: #db6afd;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 20px rgb(197, 102, 249);
+    border-radius: 10px;
+    border-bottom: solid 1px rgb(113, 250, 223);
+    padding: 5px;
+}
+
+.icon-nav-rs {
+    display: none;
+    width: 100%;
+    
+}
+
+.icon-nav-rs img {
+    width: 35px;
+    transition: all 0.42s;
+    margin: 0px 10px;
+
+}
+
+.icon-nav-rs img:hover {
+    width: 30px;
+}
+
+.icon-nav-rs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.42s;
+    margin: 0px 10px;
+
+}
+
+.icon-nav-rs a:hover {
+    box-shadow: 0px 0px 10px antiquewhite;
+    background-color: #ffd950;
+}
+
 section {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
 }
 
 .header {
@@ -151,7 +249,6 @@ h1 {
 .content-rs {
     text-align: center;
     font-size: 25px;
-    width: 330px;
 }
 
 .icon-rs {
@@ -194,7 +291,6 @@ h1 {
     box-sizing: border-box;
     font-size: 1.3em;
     font-family: 'SoftElegance';
-    text-align: justify;
     overflow-y: scroll;
     box-sizing: border-box;
 }
@@ -216,6 +312,7 @@ h1 {
 /* Global */
 
 .content-txt {
+    width: 100%;
     padding: 25px 0px;
 }
 
@@ -317,11 +414,10 @@ p {
 .content-esp section {
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .content-esp img {
-    width: 200px;
+    width: 20%;
     background-color: rgb(250, 235, 215);
     border-radius: 20px;
     margin: 0px 10px;
@@ -340,10 +436,10 @@ p {
     color: rgb(255, 255, 255);
 }
 
+
 .sec-esp ul {
     background-color: #282828;
-    width: 100%;
-    height: 900px;
+    width: 95%;
     text-align: center;
     box-sizing: border-box;
     margin: 40px 10px;
@@ -352,11 +448,16 @@ p {
 
 .ul-esp {
     border-right: solid 1px rgba(250, 235, 215, 0.222);
+    padding: 0px 40px;
+    width: 100%;
+
 }
 
 .ul-esp2 {
+    width: 100%;
     display: flex;
 }
+
 
 .ul-esp2 section {
     display: flex;
@@ -365,14 +466,14 @@ p {
 
 /* Conhecimentos */
 
-.sect-tec{
+.sect-tec {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 30px;
 }
 
 
-.content-tec{
+.content-tec {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -383,25 +484,253 @@ p {
     border-bottom: solid 1px rgba(250, 235, 215, 0.242);
     padding-bottom: 30px;
 }
-.content-tec h4{
+
+.content-tec h4 {
     font-size: 1.1em;
 }
 
 
-.sect-tec img{
+.sect-tec img {
     width: 80px;
 }
-.sect-tec .lnx{
+
+.sect-tec .lnx {
     width: 66px;
 }
 
 
 /* Projetos */
 
-.sec-proj{
-    display: flex;
+.sec-proj {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     
 }
-.content-proj img{
+
+.content-proj a {
+    margin: 30px 0px;
+}
+
+.content-proj img {
     width: 300px;
+}
+
+
+@media (max-width: 900px) {
+    .bi-list{
+        display: block;
+    }
+    nav {
+        display: none;
+        position: fixed;
+        width: 45%;
+    }
+
+    nav img {
+        display: block;
+        width: 60%;
+    }
+
+    .bi-x-lg {
+        display: block;
+    }
+
+    li,
+    a {
+        font-size: 1em;
+    }
+
+    .icon-nav-rs {
+        display: flex;
+        justify-content: space-around;
+        height: 80px;
+    }
+
+    .content-nav-rs,
+    img {
+        width: 100px;
+    }
+
+    .header {
+        width: 100%;
+        height: 35vh;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-header {
+        position: fixed;
+    }
+
+    .info-header {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .info-header h1 {
+        font-size: 1.2em;
+    }
+
+    .info-header span {
+        padding: 0;
+        font-size: 1em;
+    }
+
+    .content-rs span,
+    .icon-rs {
+        display: none;
+    }
+
+
+
+    #content-main {
+        height: 100vh;
+        padding: 0px 10px;
+        padding-bottom: 10px;
+    }
+
+    .content-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .content-txt iframe {
+        width: 70vw;
+        height: 50vh;
+    }
+
+    .content-txt h3 {
+        letter-spacing: 0px;
+        padding: 0;
+    }
+
+    /* grau Academico */
+
+    .content-esc {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 0px;
+    }
+
+    .content-esc section {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: solid 1px rgba(250, 235, 215, 0.734);
+    }
+
+    /* Especialização */
+
+    .content-esp img {
+        width: 40%;
+        margin: 10px 0px;
+
+    }
+
+    .content-esp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-esp section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-esp2 {
+        width: 95%;
+    }
+
+    /* Conhecimentos */
+
+    .sect-tec {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
+    }
+
+    .sect-tec img {
+        width: 20%;
+    }
+
+    .sect-tec .lnx {
+        width: 15%;
+    }
+
+    .content-tec {
+        width: 95%;
+    }
+    .content-tec h4{
+        font-size: 1em;
+    }
+
+   
+   
+    
+
+    /* Projetos */
+
+    .content-proj img {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 600px){
+    nav{
+        width: 80%;
+    }
+
+    nav img{
+        width: 40%;
+    }
+
+    .info-header{
+        align-items: end;
+        width: 100vw;
+    }
+
+    .info-header h1 {
+        font-size: 5vw;
+    }
+    .info-header span{
+        font-size: 3.5vw;
+    }
+
+    .content-txt iframe{
+        width: 70%;
+        height: 100%;
+    }
+
+       /* Conhecimentos */
+    .sect-tec img {
+        width: 35%;
+    }
+
+    .sect-tec .lnx {
+        width: 30%;
+    }
+
+    .content-tec {
+        width: 95%;
+    }
+    .content-tec h2{
+        font-size: 1rem;
+    }
+    .content-tec h4{
+        font-size: 1rem;
+    }
+
+
+    
 }
