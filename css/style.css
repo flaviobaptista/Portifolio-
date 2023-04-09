@@ -325,10 +325,14 @@ hr {
 .content-txt h1,
 h2,
 h3,
-h4,
-p {
+h4 {
     margin: 0px;
     padding: 10px 0px;
+    border: 0;
+}
+.content-txt p {
+    margin: 0px;
+    padding: 10px 0px 30px 0px;
     border: 0;
 }
 
@@ -623,7 +627,8 @@ p {
     .content-esc {
         display: flex;
         flex-direction: column;
-        padding: 25px 0px;
+        padding: 55px 0px;
+        width: 100%;
     }
 
     .content-esc section {
@@ -702,7 +707,7 @@ p {
 
     .info-header {
         align-items: end;
-        width: 100vw;
+        width: 90vw;
     }
 
     .info-header h1 {
@@ -714,8 +719,12 @@ p {
     }
 
     .content-txt iframe {
-        width: 70%;
+        width: 90%;
         height: 100%;
+    }
+
+    #content-main{
+        font-size: 0.7rem;
     }
 
     /* Conhecimentos */
@@ -738,6 +747,20 @@ p {
     .content-tec h4 {
         font-size: 1rem;
     }
+
+/* grau Academico */
+
+.content-esc img {
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.content-esc h3, p {
+   font-size: 1rem;
+}
+.content-esc h4 {
+   font-size: 0.8rem;
+}
 
 
 
